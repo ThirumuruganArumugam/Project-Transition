@@ -25,10 +25,6 @@ class _HomeScreenState extends State<HomeScreen>
     _animation.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
         _controller.reverse();
-        setState(() {
-          a++;
-          print("completed");
-        });
       } else if (status == AnimationStatus.dismissed) {
         _controller.forward();
       }
@@ -38,7 +34,6 @@ class _HomeScreenState extends State<HomeScreen>
     super.initState();
   }
 
-  int a = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +54,6 @@ class _HomeScreenState extends State<HomeScreen>
                       "https://th.bing.com/th/id/OIP.CsZPKXftmPWRE_J82XYShAHaEK?w=299&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7")),
             ),
           ),
-          Text(a.toString())
         ],
       ),
     );
